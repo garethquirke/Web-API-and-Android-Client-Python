@@ -1,0 +1,20 @@
+1. first we create a web api
+2. create the model class my example is a guitar class
+3. next we create our dbcontext allowing us to create tables and store data
+4. after this we create a repository which will interact with database when we need it
+5. create a controller class, configure the routes and allow clients to consume the data in good format - > json
+
+6. test this on a local browser or using postman extension with chrome
+7. the next step is to publish this on azure so an android device can consume the data as a client from anywhere
+8. right click on the solution, publish ->
+   - create a new resource group
+   - add additonal services and add a database
+   - give the web service a name
+   - publish and exectute migrations when the project is published to the azure server
+   - once publishing is complete the browser will open, test all routes and verify it works
+
+
+9. Now you can begin making a client application, in this case it is an android app to consume the data
+   and interact with the services such as adding, updating,deleting or querying our database collection
+
+10. create a new android application with a blank activity.
