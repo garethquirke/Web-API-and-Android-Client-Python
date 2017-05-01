@@ -19,3 +19,6 @@ generatedfunction = getMutiplication(5)
 # testing, expected value is 50
 print(generatedfunction(10))
 
+# using a list of functions
+listOfFunctions = [mult, generatedfunction]
+print(listOfFunctions[0](5))
