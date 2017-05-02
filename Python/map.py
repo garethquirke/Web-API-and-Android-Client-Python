@@ -22,3 +22,7 @@ print(squarelist)
 # example with lambda as a parameter in the map function
 cubedlist = list(map((lambda x: x**3), onetoten))
 print(cubedlist)
+
+# another lambda example
+addtwoarrays = list(map((lambda x,y: x + y), [1,2,3], [1,2,3]))
+print(addtwoarrays)
