@@ -14,6 +14,8 @@ from functools import reduce
 # 10. use a loop to output the top 3 values in order
 # 11. find the number of odd numbers in the list and output that
 #     comparison to even numbers
+# 12. now create a function to truncate the trailing points after the decimal
+#     and check the number of even/odd in the list
 
 # euro to dollar
 def euroToDollar(amount):
@@ -57,3 +59,38 @@ print("Max value: ", maxval)
 # use map to convert the list to dollars (through the high order functions)
 listToDollars = list(map(lambda x: round(currencyConversion(euroToDollar,x),2), values))
 print("List converted to dollars ", listToDollars)
+
+# use a loop to output all of the values
+for i in listToDollars:
+    print(i, ",")
+
+
+# list of the top 3 values 
+print(sorted(zip(listToDollars), reverse = True)[:3])
+
+
+# find the number of odd in the list output that compared to the number of even
+comparison = []
+othercomparison = []
+
+for i in values:
+    if i % 2 == 0: comparison += 'E'
+    else: comparison += 'O'
+
+print("Even numbers: " , comparison.count("E"))
+print("Odd numbers: " , comparison.count("O"))
+
+# truncate after decimal point and check again for number of even or odd
+def numbertypes(list):
+    compared = []
+    for i in list:
+        i = int(i)
+        if i % 2 == 0:
+            compared += 'E'
+        else: compared += 'O'
+    return compared
+
+
+othercomparison = numbertypes(values)
+print("Even numbers: " , othercomparison.count('E'))
+print("Odd numbers: " , othercomparison.count('O'))
